@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5" style="padding-top: 5%">
-        <form @submit="procesarFormulario">
+        <form @submit.prevent="procesarFormulario">
                 <FormSucursal :sucursal="sucursal" />
         </form>
   </div>
