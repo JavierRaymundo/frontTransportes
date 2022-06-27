@@ -1,6 +1,9 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-import router from '../router'
+import router from '@/router'
+
+
+
 export default createStore({
   state: {
     empresas:[],
@@ -80,7 +83,7 @@ export default createStore({
     },
     setEmpresa(state,payload){
       state.empresas.push(payload)
-      router.push({path:'/empresas'})
+      router.push('/empresas')
     },
     cargarEmpresa(state,payload){
       state.empresas =payload
@@ -96,7 +99,7 @@ export default createStore({
     },
     updateEmpresa(state, payload){
       state.empresas = state.empresas.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/empresas'})
+      router.push('/empresas')
     },
     eliminarEmpresa(state,payload){
       state.empresas = state.empresas.filter(item => item._id !== payload)
@@ -104,7 +107,7 @@ export default createStore({
 
     setSucursal(state,payload){
       state.sucursales.push(payload)
-      router.push({path:'/sucursales'})
+      router.push('/sucursales')
     },
     cargarSucursal(state,payload){
       state.sucursales =payload
@@ -117,7 +120,7 @@ export default createStore({
     },
     updateSucursal(state, payload){
       state.sucursales = state.sucursales.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/sucursales'})
+      router.push('/sucursales')
     },
     eliminarSucursal(state,payload){
       state.sucursales = state.sucursales.filter(item => item._id !== payload)
@@ -126,7 +129,7 @@ export default createStore({
 
     setEmpleado(state,payload){
       state.empleados.push(payload)
-      router.push({path:'/empleados'})
+      router.push('/empleados')
     },
     cargarEmpleado(state,payload){
       state.empleados =payload
@@ -142,13 +145,13 @@ export default createStore({
     },
     updateEmpleado(state, payload){
       state.empleados = state.empleados.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/empleados'})
+      router.push('/empleados')
     },
 
 
     setVehiculo(state,payload){
       state.vehiculos.push(payload)
-      router.push({path:'/vehiculos'})
+      router.push('/vehiculos')
     },
     cargarVehiculo(state,payload){
       state.vehiculos =payload
@@ -164,13 +167,13 @@ export default createStore({
     },
     updateVehiculo(state, payload){
       state.vehiculos = state.vehiculos.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/vehiculos'})
+      router.push('/vehiculos')
     },
 
     //CLIENTES
     setCliente(state,payload){
       state.clientes.push(payload)
-      router.push({path:'/clientes'})
+      router.push('/clientes')
     },
     cargarCliente(state,payload){
       state.clientes =payload
@@ -186,13 +189,13 @@ export default createStore({
     },
     updateCliente(state, payload){
       state.clientes = state.clientes.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/clientes'})
+      router.push('/clientes')
     },
 
     //VENTAS
     setVenta(state,payload){
       state.ventas.push(payload)
-      router.push({path:'/ventas'})
+      router.push('/ventas')
     },
     cargarVenta(state,payload){
       state.ventas =payload
@@ -208,13 +211,13 @@ export default createStore({
     },
     updateVenta(state, payload){
       state.ventas = state.ventas.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/ventas'})
+      router.push('/ventas')
     },
 
      //alquileres
      setAlquiler(state,payload){
       state.alquileres.push(payload)
-      router.push({path:'/alquileres'})
+      router.push('/alquileres')
     },
     cargarAlquiler(state,payload){
       state.alquileres =payload
@@ -230,13 +233,13 @@ export default createStore({
     },
     updateAlquiler(state, payload){
       state.alquileres = state.alquileres.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/alquileres'})
+      router.push('/alquileres')
     },
 
     //exportaczao
     setExportacion(state,payload){
       state.exportaciones.push(payload)
-      router.push({path:'/exportaciones'})
+      router.push('/exportaciones')
     },
     cargarExportacion(state,payload){
       state.exportaciones =payload
@@ -252,7 +255,7 @@ export default createStore({
     },
     updateExportacion(state, payload){
       state.exportaciones = state.exportaciones.map(item => item._id === payload._id ? payload : item)
-      router.push({path:'/exportaciones'})
+      router.push('/exportaciones')
     },
   },
 
